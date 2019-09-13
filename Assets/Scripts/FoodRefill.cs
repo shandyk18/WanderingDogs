@@ -36,4 +36,8 @@ public class FoodRefill : MonoBehaviour {
 		GetComponent<UnityEngine.UI.Image>().color = Color.red;
 		timeLeft = 10.0f;
 	}
+
+	public bool isFilled() {
+		return bowlFilled;
+	}
 }

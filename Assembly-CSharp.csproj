@@ -53,9 +53,11 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\DisplayFoodPanel.cs" />
      <Compile Include="Assets\Scripts\DisplayMainScene.cs" />
+     <Compile Include="Assets\Scripts\DisplayMenu.cs" />
      <Compile Include="Assets\Scripts\DisplayProfile.cs" />
      <Compile Include="Assets\Scripts\FoodRefill.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\SpawnDog.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/SM/Documents/Wandering Dogs/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
