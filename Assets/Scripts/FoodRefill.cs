@@ -22,14 +22,18 @@ public class FoodRefill : MonoBehaviour {
 
 			if (timeLeft < 0) {
 				bowlFilled = false;
+				// white when empty
+				GetComponent<UnityEngine.UI.Image> ().color = Color.white;
 				Debug.Log ("Empty Bowl");
 			}
 		}
 	}
 
+	// red when filled
 	public void TaskOnClick() {
 		Debug.Log ("Clicked Refill Button");
 		bowlFilled = true;
+		GetComponent<UnityEngine.UI.Image>().color = Color.red;
 		timeLeft = 10.0f;
 	}
 }
