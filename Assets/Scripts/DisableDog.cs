@@ -10,8 +10,8 @@ public class DisableDog : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Random rand = new Random ();
-		timeRemaining = 10f;
+		System.Random rand = new System.Random ();
+		timeRemaining = 10f * rand.Next(1, 11);
 	}
 	
 	// Update is called once per frame

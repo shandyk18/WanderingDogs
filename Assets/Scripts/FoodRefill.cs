@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class FoodRefill : MonoBehaviour {
 
 	public Button refillButton;
+	public GameObject foodPanel;
 
 	protected float timeLeft = 10.0f; 
 	protected bool bowlFilled;
@@ -33,7 +34,8 @@ public class FoodRefill : MonoBehaviour {
 	public void TaskOnClick() {
 		Debug.Log ("Clicked Refill Button");
 		bowlFilled = true;
-		GetComponent<UnityEngine.UI.Image>().color = Color.red;
+		//GetComponent<UnityEngine.UI.Image>().color = Color.red;
+		foodPanel.SetActive(false);
 		timeLeft = 10.0f;
 	}
 
