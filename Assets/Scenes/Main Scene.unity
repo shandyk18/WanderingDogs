@@ -1627,9 +1627,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   refillButton: {fileID: 0}
-  refillScript: {fileID: 0}
-  dogSprite: {fileID: 0}
-  spawnPoint: {fileID: 0}
+  dogs:
+  - {fileID: 1918832355191510, guid: ef673b16699ae82438098cf5dac5c2fb, type: 2}
+  - {fileID: 1918832355191510, guid: ef673b16699ae82438098cf5dac5c2fb, type: 2}
+  - {fileID: 1918832355191510, guid: ef673b16699ae82438098cf5dac5c2fb, type: 2}
+  - {fileID: 1918832355191510, guid: ef673b16699ae82438098cf5dac5c2fb, type: 2}
+  spawnPoints:
+  - {fileID: 600554207}
+  - {fileID: 1125641274}
+  - {fileID: 1959982249}
+  - {fileID: 911919397}
+  spawnFreq: 1
+  spawnDelay: 5
 --- !u!4 &1964825796
 Transform:
   m_ObjectHideFlags: 0

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,14 +16,14 @@ public class SpawnDog : MonoBehaviour {
 
 	private bool hasToy;
 	//private List<Integer> dogInYard;
-	private Random rand;
+	private System.Random rand;
 
 	// Use this for initialization
 	private void Start () {
 		//hasToy = refillButton.GetComponent<>();
 		//dogInYard = new ArrayList<> ();
 		hasToy = true;
-		rand = new Random ();
+		rand = new System.Random ();
 	}
 	
 	// Update is called once per frame
@@ -31,7 +32,7 @@ public class SpawnDog : MonoBehaviour {
 		if (nextTimeToSpawn < 0) {
 			nextTimeToSpawn = 15f;
 			if (hasToy) { //refillButton.GetComponent<FoodRefill>().isFilled() && 
-				int dogNum = 1;//rand.Next(0, 3);
+				int dogNum = rand.Next(0, 4);
 				//if (!dogInYard.Contains (dogNum)) {
 				Spawn(dogs[dogNum]);
 				//}
@@ -43,7 +44,7 @@ public class SpawnDog : MonoBehaviour {
 	}
 
 	void Spawn(GameObject dogToSpawn) {
-		int spawnIndex = 1;//rand.Next(0, 5);
+		int spawnIndex = rand.Next(0, 4);
 		Transform spawnPoint = spawnPoints [spawnIndex];
 		GameObject newDog = Instantiate (dogToSpawn, spawnPoint.position, spawnPoint.rotation);
 		newDog.SetActive (true);
