@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4029222053044902}
   - component: {fileID: 212853867038207990}
-  - component: {fileID: 114584389455593210}
   m_Layer: 0
   m_Name: Spawn Point
   m_TagString: Untagged
@@ -41,21 +40,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114584389455593210
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1214804583368642}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25c11231cc5e6e241862be8dcd32cce4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  refillButton: {fileID: 0}
-  refillScript: {fileID: 0}
-  dogSprite: {fileID: 21300000, guid: 4993bd76fdb51ef46965726c4f1bff1c, type: 3}
-  spawnPoint: {fileID: 21300000, guid: 879ece5086a81624e82457e4a7210661, type: 3}
 --- !u!212 &212853867038207990
 SpriteRenderer:
   m_ObjectHideFlags: 1

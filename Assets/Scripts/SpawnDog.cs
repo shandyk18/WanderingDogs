@@ -6,30 +6,47 @@ using UnityEngine.UI;
 public class SpawnDog : MonoBehaviour {
 
 	public Button refillButton;
-	public FoodRefill refillScript;
+
+	public GameObject[] dogs;
+	public Transform[] spawnPoints;
+	public int spawnFreq;
+	public float spawnDelay = 15f;
+	private float nextTimeToSpawn = 0f;
 
 	private bool hasToy;
-	private SpriteRenderer sr;
-
-	public Sprite dogSprite;
-	public Sprite spawnPoint;
-
-	void Awake() {
-		sr = GetComponent<SpriteRenderer>() as SpriteRenderer;
-	}
+	//private List<Integer> dogInYard;
+	private Random rand;
 
 	// Use this for initialization
-	void Start () {
-		refillScript = refillButton.GetComponent<Button>().GetComponent<FoodRefill>();
+	private void Start () {
+		//hasToy = refillButton.GetComponent<>();
+		//dogInYard = new ArrayList<> ();
 		hasToy = true;
+		rand = new Random ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (refillScript.isFilled () && hasToy) {
-			sr.sprite = dogSprite;
-		} else {
-			sr.sprite = spawnPoint;
+		nextTimeToSpawn -= Time.deltaTime;
+		if (nextTimeToSpawn < 0) {
+			nextTimeToSpawn = 15f;
+			if (hasToy) { //refillButton.GetComponent<FoodRefill>().isFilled() && 
+				int dogNum = 1;//rand.Next(0, 3);
+				//if (!dogInYard.Contains (dogNum)) {
+				Spawn(dogs[dogNum]);
+				//}
+
+			} else {
+				// make GO disappear
+			}
 		}
+	}
+
+	void Spawn(GameObject dogToSpawn) {
+		int spawnIndex = 1;//rand.Next(0, 5);
+		Transform spawnPoint = spawnPoints [spawnIndex];
+		GameObject newDog = Instantiate (dogToSpawn, spawnPoint.position, spawnPoint.rotation);
+		newDog.SetActive (true);
+		//newDog.GetComponent<Transform> ().parent = transform;
 	}
 }

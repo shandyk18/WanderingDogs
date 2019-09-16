@@ -1,8 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\DisplayProfile.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\SpawnDog.cs">
     <Files>
-      <File FileName="Assets\Scripts\DisplayProfile.cs" Line="15" Column="18" />
+      <File FileName="Assets\Scripts\DisplayProfile.cs" Line="24" Column="1" />
+      <File FileName="Assets\Scripts\FoodRefill.cs" Line="18" Column="2" />
+      <File FileName="Assets\Scripts\SpawnDog.cs" Line="26" Column="2" />
+      <File FileName="Assets\Scripts\DisplayMenu.cs" Line="8" Column="2" />
+      <File FileName="Assets\Scripts\DisplayFoodPanel.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
