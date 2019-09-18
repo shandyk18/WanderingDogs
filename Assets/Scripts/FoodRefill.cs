@@ -9,7 +9,7 @@ public class FoodRefill : MonoBehaviour {
 	public GameObject foodPanel;
 
 	protected float timeLeft = 10.0f; 
-	protected bool bowlFilled;
+	private bool bowlFilled;
 
 	void Start () {
 		Button btn = refillButton.GetComponent<Button>();
@@ -17,14 +17,12 @@ public class FoodRefill : MonoBehaviour {
 		bowlFilled = false;
 	}
 
-	void Update() {
+	void Update () {
 		if (bowlFilled == true) {
 			timeLeft -= Time.deltaTime;
-
+			Debug.Log (timeLeft);
 			if (timeLeft < 0) {
 				bowlFilled = false;
-				// white when empty
-				GetComponent<UnityEngine.UI.Image> ().color = Color.white;
 				Debug.Log ("Empty Bowl");
 			}
 		}
@@ -33,10 +31,10 @@ public class FoodRefill : MonoBehaviour {
 	// red when filled
 	public void TaskOnClick() {
 		Debug.Log ("Clicked Refill Button");
+		timeLeft = 10.0f;
 		bowlFilled = true;
 		//GetComponent<UnityEngine.UI.Image>().color = Color.red;
 		foodPanel.SetActive(false);
-		timeLeft = 10.0f;
 	}
 
 	public bool isFilled() {

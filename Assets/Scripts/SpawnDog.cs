@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class SpawnDog : MonoBehaviour {
 
 	public Button refillButton;
+	private FoodRefill refillScript;
 
 	public GameObject[] dogs;
 	public Transform[] spawnPoints;
@@ -21,8 +22,8 @@ public class SpawnDog : MonoBehaviour {
 
 	// Use this for initialization
 	private void Start () {
-		//hasToy = refillButton.GetComponent<>();
-		//dogInYard = new ArrayList<> ();
+		// gets script that contains bowl bool
+		refillScript = refillButton.GetComponent<FoodRefill> ();
 		hasToy = true;
 		rand = new System.Random ();
 	}
@@ -32,8 +33,8 @@ public class SpawnDog : MonoBehaviour {
 		nextTimeToSpawn -= Time.deltaTime;
 		if (nextTimeToSpawn < 0) {
 			nextTimeToSpawn = 15f;
-			// if spawn point has a toy
-			if (hasToy) { //refillButton.GetComponent<FoodRefill>().isFilled() && 
+			// if spawn point has a toy and bowl is filled
+			if (hasToy && refillScript.isFilled()) {
 				// chooses random dog to spawn
 				int dogNum = rand.Next(0, 4);
 				// if yard does not already contain chosen dog
