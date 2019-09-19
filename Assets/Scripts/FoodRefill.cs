@@ -7,39 +7,22 @@ public class FoodRefill : MonoBehaviour {
 
 	public Button refillButton;
 	public GameObject foodPanel;
+	public GameObject foodBowl;
+	public bool bowlFilled;
 
-	protected float timeLeft = 10.0f; 
-	private bool bowlFilled;
+	private FoodTimer timerScript;
 
 	void Start () {
 		Button btn = refillButton.GetComponent<Button>();
 		btn.onClick.AddListener(TaskOnClick);
+		timerScript = foodBowl.GetComponent<FoodTimer> ();
 		bowlFilled = false;
 	}
 
-	// bug comes from hiding panel so Update() not called
-	void Update () {
-		Debug.Log (bowlFilled);
-		if (bowlFilled == true) {
-			timeLeft -= Time.deltaTime;
-			Debug.Log (timeLeft);
-			if (timeLeft < 0) {
-				bowlFilled = false;
-				Debug.Log ("Empty Bowl");
-			}
-		}
-	}
-
-	// red when filled
-	public void TaskOnClick() {
-		Debug.Log ("Clicked Refill Button");
-		timeLeft = 10.0f;
+	void TaskOnClick() {
+		Debug.Log ("Bowl refilled");
 		bowlFilled = true;
-		//GetComponent<UnityEngine.UI.Image>().color = Color.red;
+		timerScript.TimeRestart();
 		foodPanel.SetActive(false);
-	}
-
-	public bool isFilled() {
-		return bowlFilled;
 	}
 }

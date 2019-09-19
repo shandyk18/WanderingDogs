@@ -193,6 +193,7 @@ GameObject:
   - component: {fileID: 254081748}
   - component: {fileID: 254081747}
   - component: {fileID: 254081746}
+  - component: {fileID: 254081750}
   - component: {fileID: 254081749}
   m_Layer: 0
   m_Name: Food Bowl
@@ -296,6 +297,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.2351725, y: 1.0978194}
   m_EdgeRadius: 0
+--- !u!114 &254081750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 254081745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 100fae5eaf7fa4241a016cf89d163ed5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  refillButton: {fileID: 267471443}
 --- !u!1 &267471440
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,6 +360,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   refillButton: {fileID: 267471443}
   foodPanel: {fileID: 44364041}
+  foodBowl: {fileID: 254081745}
+  bowlFilled: 0
 --- !u!114 &267471443
 MonoBehaviour:
   m_ObjectHideFlags: 0

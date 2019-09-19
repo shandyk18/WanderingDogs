@@ -58,6 +58,7 @@
      <Compile Include="Assets\Scripts\DisplayProfile.cs" />
      <Compile Include="Assets\Scripts\DisplayShop.cs" />
      <Compile Include="Assets\Scripts\FoodRefill.cs" />
+     <Compile Include="Assets\Scripts\FoodTimer.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\SpawnDog.cs" />
  <Reference Include="UnityEditor.StandardEvents">

@@ -34,7 +34,7 @@ public class SpawnDog : MonoBehaviour {
 		if (nextTimeToSpawn < 0) {
 			nextTimeToSpawn = 15f;
 			// if spawn point has a toy and bowl is filled
-			if (hasToy && refillScript.isFilled()) {
+			if (hasToy && refillScript.bowlFilled) {
 				// chooses random dog to spawn
 				int dogNum = rand.Next(0, 4);
 				// if yard does not already contain chosen dog

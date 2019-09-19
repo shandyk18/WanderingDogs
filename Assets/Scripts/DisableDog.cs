@@ -10,7 +10,7 @@ public class DisableDog : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		System.Random rand = new System.Random ();
+		//System.Random rand = new System.Random ();
 		timeRemaining = 10f;
 	}
 	
