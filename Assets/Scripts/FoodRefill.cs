@@ -17,7 +17,9 @@ public class FoodRefill : MonoBehaviour {
 		bowlFilled = false;
 	}
 
+	// bug comes from hiding panel so Update() not called
 	void Update () {
+		Debug.Log (bowlFilled);
 		if (bowlFilled == true) {
 			timeLeft -= Time.deltaTime;
 			Debug.Log (timeLeft);
