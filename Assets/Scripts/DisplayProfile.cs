@@ -1,23 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class DisplayProfile : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	public GameObject profilePanel;
 
-	public void OnMouseDown() {
-		Debug.Log ("Click!");
-		SceneManager.LoadScene ("Profile");
+	public void ShowProfile() {
+		profilePanel.SetActive (true);
 	}
-		
 }

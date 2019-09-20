@@ -29,6 +29,6 @@ public class FoodTimer : MonoBehaviour {
 	}
 
 	public void TimeRestart() {
-		timeLeft = 10f;
+		timeLeft = 60f;
 	}
 }

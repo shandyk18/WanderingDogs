@@ -32,7 +32,7 @@ public class SpawnDog : MonoBehaviour {
 	void Update () {
 		nextTimeToSpawn -= Time.deltaTime;
 		if (nextTimeToSpawn < 0) {
-			nextTimeToSpawn = 15f;
+			nextTimeToSpawn = 10f;
 			// if spawn point has a toy and bowl is filled
 			if (hasToy && refillScript.bowlFilled) {
 				// chooses random dog to spawn
