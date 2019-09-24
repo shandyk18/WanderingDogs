@@ -59,12 +59,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\BoneCountScript.cs" />
     <Compile Include="Assets\Scripts\DisableDog.cs" />
-    <Compile Include="Assets\Scripts\DisplayFoodPanel.cs" />
-    <Compile Include="Assets\Scripts\DisplayMainScene.cs" />
-    <Compile Include="Assets\Scripts\DisplayMenu.cs" />
+    <Compile Include="Assets\Scripts\DisablePanel.cs" />
+    <Compile Include="Assets\Scripts\DisplayPanel.cs" />
     <Compile Include="Assets\Scripts\DisplayProfile.cs" />
-    <Compile Include="Assets\Scripts\DisplayShop.cs" />
     <Compile Include="Assets\Scripts\FoodRefill.cs" />
     <Compile Include="Assets\Scripts\FoodTimer.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
