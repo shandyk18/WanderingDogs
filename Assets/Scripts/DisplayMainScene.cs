@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class DisplayMainScene : MonoBehaviour {
 
 	public Button escButton;
-	public GameObject profilePanel;
+	public GameObject panel;
 
 	// Use this for initialization
 	void Start () {
@@ -17,6 +17,6 @@ public class DisplayMainScene : MonoBehaviour {
 	
 	public void TaskOnClick() {
 		Debug.Log ("Clicked ESC Button");
-		profilePanel.SetActive (false);
+		panel.SetActive (false);
 	}
 }
