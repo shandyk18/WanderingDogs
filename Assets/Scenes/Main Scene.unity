@@ -3509,7 +3509,7 @@ MonoBehaviour:
   - {fileID: 911919397}
   spawnFreq: 1
   spawnDelay: 5
-  boneText: {fileID: 0}
+  boneText: {fileID: 599274450}
 --- !u!4 &1964825796
 Transform:
   m_ObjectHideFlags: 0

@@ -7,7 +7,6 @@ public class DisableDog : MonoBehaviour {
 	private float timeRemaining;
 
 	public GameObject thisDog;
-    public int bones;
 
 	// Use this for initialization
 	void Start () {
@@ -20,7 +19,6 @@ public class DisableDog : MonoBehaviour {
 		timeRemaining -= Time.deltaTime;
 		if (timeRemaining < 0) {
 			Destroy (thisDog);
-            bones = 10;
 			Debug.Log ("10 Bones Given");
 		}
 	}

@@ -13,13 +13,13 @@ public class SpawnDog : MonoBehaviour {
 	public Transform[] spawnPoints;
 
 	public int spawnFreq;
-	public float spawnDelay = 15f;
+	public float spawnDelay = 10f;
 
     public Text boneText;
 
-	private float nextTimeToSpawn = 0f;
+    private List<GameObject> dogInYard;
+    private float nextTimeToSpawn = 0f;
 	private bool hasToy;
-	private List<GameObject> dogInYard;
     private int boneCount;
 	private System.Random rand;
 
@@ -53,11 +53,12 @@ public class SpawnDog : MonoBehaviour {
 			}
 		}
         // TODO: more efficient way to do this?
-        if (dogInYard.Contains(null))
-        {
+        if (dogInYard.Contains(null)) {
+            //something wrong with this line?
             dogInYard.Remove(null);
             boneCount += 10;
             boneText.text = "Bones: " + boneCount.ToString();
+            Debug.Log(dogInYard.Capacity);
         }
         /*foreach (GameObject dog in dogInYard) {
             if(dog == null) {
