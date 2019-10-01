@@ -181,12 +181,11 @@
 -define:UNITY_TEAM_LICENSE
 -define:ENABLE_VSTU
 -define:UNITY_POST_PROCESSING_STACK_V2
+Assets/Scripts/BoneCountScript.cs
 Assets/Scripts/DisableDog.cs
-Assets/Scripts/DisplayFoodPanel.cs
-Assets/Scripts/DisplayMainScene.cs
-Assets/Scripts/DisplayMenu.cs
+Assets/Scripts/DisablePanel.cs
+Assets/Scripts/DisplayPanel.cs
 Assets/Scripts/DisplayProfile.cs
-Assets/Scripts/DisplayShop.cs
 Assets/Scripts/FoodRefill.cs
 Assets/Scripts/FoodTimer.cs
 Assets/Scripts/PlayerMovement.cs

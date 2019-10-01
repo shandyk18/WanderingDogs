@@ -15,15 +15,24 @@ public class SpawnDog : MonoBehaviour {
 	public int spawnFreq;
 	public float spawnDelay = 15f;
 
+    public Text boneText;
+
 	private float nextTimeToSpawn = 0f;
 	private bool hasToy;
-	//private List<Integer> dogInYard;
+	private List<GameObject> dogInYard;
+    private int boneCount;
 	private System.Random rand;
+
+    void Awake() {
+        boneCount = 0;
+        boneText.text = "Bones: " + boneCount.ToString();
+    }
 
 	// Use this for initialization
 	private void Start () {
 		// gets script that contains bowl bool
 		refillScript = refillButton.GetComponent<FoodRefill> ();
+        dogInYard = new List<GameObject>();
 		hasToy = true;
 		rand = new System.Random ();
 	}
@@ -39,18 +48,32 @@ public class SpawnDog : MonoBehaviour {
 				int dogNum = rand.Next(0, 4);
 				// if yard does not already contain chosen dog
 				//if (!dogInYard.Contains (dogNum)) {
-				Spawn(dogs[dogNum]);
+				dogInYard.Add(Spawn(dogs[dogNum]));
 				//}
 			}
 		}
+        // TODO: more efficient way to do this?
+        if (dogInYard.Contains(null))
+        {
+            dogInYard.Remove(null);
+            boneCount += 10;
+            boneText.text = "Bones: " + boneCount.ToString();
+        }
+        /*foreach (GameObject dog in dogInYard) {
+            if(dog == null) {
+                dogInYard.Remove(dog);
+                boneText.text = "Bones: " + boneCount.ToString();
+            }
+        }*/
 	}
 
-	void Spawn(GameObject dogToSpawn) {
+	GameObject Spawn(GameObject dogToSpawn) {
 		// randomly chooses one of four spawn points
 		int spawnIndex = rand.Next(0, 4);
 		Transform spawnPoint = spawnPoints [spawnIndex];
 		// instantiates dog
 		GameObject newDog = Instantiate (dogToSpawn, spawnPoint.position, spawnPoint.rotation);
 		newDog.SetActive (true);
+        return newDog;
 	}
 }
